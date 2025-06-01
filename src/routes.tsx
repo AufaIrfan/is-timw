@@ -29,23 +29,35 @@ const routes: IRoute[] = [
   {
     name: 'Purchase',
     layout: '/admin',
-    path: '/purchase',
+    path: '#',
     icon: <Icon as={MdReceipt} width="20px" height="20px" color="inherit" />,
+    children: [
+      {
+        name: 'Purchase Request',
+        layout: '/admin',
+        path: '/purchase',
+      },
+      {
+        name: 'Purchase Order',
+        layout: '/admin',
+        path: '/purchase',
+      },
+    ],
   },
-  {
-    name: 'NFT Marketplace',
-    layout: '/admin',
-    path: '/nft-marketplace',
-    icon: (
-      <Icon
-        as={MdOutlineShoppingCart}
-        width="20px"
-        height="20px"
-        color="inherit"
-      />
-    ),
-    secondary: true,
-  },
+  // {
+  //   name: 'NFT Marketplace',
+  //   layout: '/admin',
+  //   path: '/nft-marketplace',
+  //   icon: (
+  //     <Icon
+  //       as={MdOutlineShoppingCart}
+  //       width="20px"
+  //       height="20px"
+  //       color="inherit"
+  //     />
+  //   ),
+  //   secondary: true,
+  // },
   {
     name: 'Data Tables',
     layout: '/admin',
@@ -58,18 +70,18 @@ const routes: IRoute[] = [
     path: '/profile',
     icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
   },
-  {
-    name: 'Sign In',
-    layout: '/auth',
-    path: '/sign-in',
-    icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
-  },
-  {
-    name: 'RTL Admin',
-    layout: '/rtl',
-    path: '/rtl-default',
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-  },
+  // {
+  //   name: 'Sign In',
+  //   layout: '/auth',
+  //   path: '/sign-in',
+  //   icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
+  // },
+  // {
+  //   name: 'RTL Admin',
+  //   layout: '/rtl',
+  //   path: '/rtl-default',
+  //   icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
+  // },
 ];
 
 export default routes;

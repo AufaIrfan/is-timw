@@ -30,7 +30,7 @@ type RowObj = {
 const columnHelper = createColumnHelper<RowObj>();
 
 // const columns = columnsDataCheck;
-export default function ComplexTable(props: { tableData: any }) {
+export default function PurchaseReqTable(props: { tableData: any }) {
 	const { tableData } = props;
 	const [ sorting, setSorting ] = React.useState<SortingState>([]);
 	const textColor = useColorModeValue('secondaryGray.900', 'white');
@@ -193,13 +193,13 @@ export default function ComplexTable(props: { tableData: any }) {
 	});
 	return (
 		<Card flexDirection='column' w='100%' px='0px' overflowX={{ sm: 'scroll', lg: 'hidden' }}>
-			<Flex px='25px' mb="8px" justifyContent='space-between' align='center'>
+			<Flex w='100%' px='25px' mb="8px" justifyContent='space-between' align='center'>
 				<Text color={textColor} fontSize='22px' fontWeight='700' lineHeight='100%'>
-					Complex Table
+					Purchase Request Table
 				</Text>
 				<Menu />
 			</Flex>
-			<Box>
+			<Box w={'100%'}>
 				<Table variant='simple' color='gray.500' mb='24px' mt="12px">
 					<Thead>
 						{table.getHeaderGroups().map((headerGroup) => (

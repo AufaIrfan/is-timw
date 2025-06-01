@@ -1,19 +1,26 @@
 // chakra imports
-import { Box, Flex, Stack } from '@chakra-ui/react';
+import { 
+    Box, 
+    Flex, 
+    Stack,
+    Text, 
+    useDisclosure,
+    Link as ChakraLink,
+ } from '@chakra-ui/react';
 //   Custom components
 import Brand from 'components/sidebar/components/Brand';
 import Links from 'components/sidebar/components/Links';
-import DropdownLinks from './DropdownLinks';
 import SidebarCard from 'components/sidebar/components/SidebarCard';
 import { IRoute } from 'types/navigation';
+import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 // FUNCTIONS
 
-interface SidebarContentProps {
+interface SidebarDropdownContentProps {
 	routes: IRoute[];
 }
 
-function SidebarContent(props: SidebarContentProps) {
+function SidebarDropdownContent(props: SidebarDropdownContentProps) {
 	const { routes } = props;
 	// SIDEBAR
 	return (
@@ -21,15 +28,15 @@ function SidebarContent(props: SidebarContentProps) {
 			<Brand />
 			<Stack direction='column' mt='8px' mb='auto'>
 				<Box ps='20px' pe={{ lg: '16px', '2xl': '16px' }}>
-					<DropdownLinks routes={routes} />
+					<Links routes={routes} />
 				</Box>
 			</Stack>
 
-			{/* <Box ps='20px' pe={{ lg: '16px', '2xl': '20px' }} mt='60px' mb='40px' borderRadius='30px'>
+			<Box ps='20px' pe={{ lg: '16px', '2xl': '20px' }} mt='60px' mb='40px' borderRadius='30px'>
 				<SidebarCard />
-			</Box> */}
+			</Box>
 		</Flex>
 	);
 }
 
-export default SidebarContent;
+export default SidebarDropdownContent;

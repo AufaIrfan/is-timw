@@ -6,4 +6,11 @@ export interface IRoute {
   icon: ReactComponentElement | string;
   secondary?: boolean;
   path: string;
+  children?: routeDropdown[];
+}
+
+export interface routeDropdown {
+  name: string;
+  layout: string;
+  path: string;
 }
