@@ -40,7 +40,9 @@ export function SidebarLinks(props: SidebarLinksProps) {
       if (
         route.layout === '/admin' ||
         route.layout === '/auth' ||
-        route.layout === '/rtl'
+        route.layout === '/rtl' ||
+        route.layout === '/admin/nft-marketplace' ||
+        route.layout === '/admin/purchase'
       ) {
         return (
           <Link key={index} href={route.layout + route.path}>
