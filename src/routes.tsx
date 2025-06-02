@@ -44,6 +44,48 @@ const routes: IRoute[] = [
       },
     ],
   },
+  {
+    name: 'Warehouse',
+    layout: '/admin',
+    path: '#',
+    icon: <Icon as={MdReceipt} width="20px" height="20px" color="inherit" />,
+    children: [
+      {
+        name: 'Stock Warehouse',
+        layout: '/admin',
+        path: '/default',
+      },
+      {
+        name: 'Stock ?',
+        layout: '/admin',
+        path: '/default',
+      },
+    ],
+  },
+  {
+    name: 'Supplier',
+    layout: '/admin',
+    icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
+    path: '/data-tables',
+  },
+  {
+    name: 'Report',
+    layout: '/admin',
+    path: '#',
+    icon: <Icon as={MdReceipt} width="20px" height="20px" color="inherit" />,
+    children: [
+      {
+        name: 'Purchase Report',
+        layout: '/admin',
+        path: '/data-tables',
+      },
+      {
+        name: 'Warehouse Report',
+        layout: '/admin',
+        path: '/default',
+      },
+    ],
+  },
   // {
   //   name: 'NFT Marketplace',
   //   layout: '/admin',
@@ -58,12 +100,12 @@ const routes: IRoute[] = [
   //   ),
   //   secondary: true,
   // },
-  {
-    name: 'Data Tables',
-    layout: '/admin',
-    icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    path: '/data-tables',
-  },
+  // {
+  //   name: 'Data Tables',
+  //   layout: '/admin',
+  //   icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
+  //   path: '/data-tables',
+  // },
   {
     name: 'Profile',
     layout: '/admin',
